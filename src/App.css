@@ -76,6 +76,17 @@ ul {
   color: gray;
   background: #d4edda;
 }
+.task-content {
+  display: flex;
+  align-items: center;
+  flex: 1;   /* text ko space lene do */
+}
+
+.task-content span {
+  margin-left: 8px;
+  word-break: break-word; /* long text bhi wrap ho jayega */
+}
+
 
 .todo-item input[type="checkbox"] {
   margin-right: 10px;

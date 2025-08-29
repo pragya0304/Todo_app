@@ -13,6 +13,7 @@
   animation: fadeIn 0.5s forwards;
 }
 .todo-item:hover {
+   background: #eaeaea;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -21,6 +22,7 @@
   text-decoration: line-through;
   color: gray;
   background: #DABFFF;
+  opacity: 0.8;
 }
 
 .todo-item input[type="checkbox"] {
@@ -41,7 +43,7 @@
 }
 
 .todo-item .buttons button {
-  margin-left: 6px;
+  margin-left: 8px;
   padding: 6px 10px;
   border-radius: 6px;
   border: none;

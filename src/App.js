@@ -61,26 +61,27 @@ function App() {
       </div>
 
       <ul>
-        {todos.map((todo, index) => (
-          <li key={index} className={`todo-item ${todo.completed ? "completed" : ""}`}>
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <input
-                type="checkbox"
-                checked={todo.completed}
-                onChange={() => toggleComplete(index)}
-              />
-              <span>{todo.text}</span>
-            </div>
-            <div className="buttons">
-              <button className="complete" onClick={() => toggleComplete(index)}>
-                {todo.completed ? "Undo" : "Complete"}
-              </button>
-              <button onClick={() => editTodo(index)}>Edit</button>
-              <button className="delete" onClick={() => deleteTodo(index)}>Delete</button>
-            </div>
-          </li>
-        ))}
-      </ul>
+  {todos.map((todo, index) => (
+    <li key={index} className={`todo-item ${todo.completed ? "completed" : ""}`}>
+      <div className="task-content">
+        <input
+          type="checkbox"
+          checked={todo.completed}
+          onChange={() => toggleComplete(index)}
+        />
+        <span>{todo.text}</span>
+      </div>
+      <div className="buttons">
+        <button className="complete" onClick={() => toggleComplete(index)}>
+          {todo.completed ? "Undo" : "Complete"}
+        </button>
+        <button className="edit" onClick={() => editTodo(index)}>Edit</button>
+        <button className="delete" onClick={() => deleteTodo(index)}>Delete</button>
+      </div>
+    </li>
+  ))}
+</ul>
+
 
       {todos.length > 0 && (
         <button className="clear-btn" onClick={clearAll}>
